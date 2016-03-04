@@ -1,8 +1,15 @@
 require_relative 'config/environment'
 
-class App < sinatra::Base
+class App < Sinatra::Base
 
-get '/' do 
-   ' <h1> Andres is a sexy beast </h> '
-
- end
+   get '/' do 
+   erb :index
+   end
+   
+   post '/' do 
+   
+   
+   erb :dashboard
+   end
+   
+end
